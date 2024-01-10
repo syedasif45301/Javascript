@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 2</title>
+    <style>
+        body{
+            background-color: black;
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">tuesday</div>
+        <div class="day">wednesday</div>
+        <div class="day">thursday</div>
+        <div class="day">friday</div>
+    </div>
+
+
+
+
+
+
+
+
+    <ul class="language">
+        <li>Javascript</li>
+        <li>python</li>
+        <li>html</li>
+    </ul>
+
+
+
+
+
+
+
+
+
+    <script>
+     
+    //   const myParent=document.querySelector('.parent');
+    //   console.log(myParent);
+    //   console.log(myParent.children);
+    //   console.log(myParent.children[0]);
+    //   console.log(myParent.children[2]);
+
+    //     console.log("for loop:");
+    //   for (let i = 0; i <=myParent.children.length; i++) {
+    //     console.log(myParent.children[i]);
+       
+        
+    //   }
+
+    //   console.log(myParent.children[1].style.color="blue");
+    //   myParent.style.backgroundColor="red";
+    //   myParent.style.padding="5px";
+      
+
+    //   console.log(myParent.firstElementChild);
+
+    //   const myChild=document.querySelector('.day');
+    //   console.log(myChild);
+    //   console.log(myChild.parentElement);
+    //   console.log(myChild.nextElementSibling);
+
+
+
+
+
+    //creating new element
+
+    // const myH3=document.createElement('h3');
+    // console.log(myH3);
+    // myH3.className="cls";
+    // myH3.id="d1";
+    // // myH3.textContent="hello! welcome here";
+    // // myH3.setAttribute('title','H3');
+    // // myH3.style.color="blue";
+    // const myh=document.createTextNode("hello Ji Welcome here")
+    // myH3.appendChild(myh)
+    // document.body.appendChild(myH3)
+    // console.log(myh);
+ 
+
+
+
+
+    //----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+    //self practice  DOM :
+
+
+    //     const myP=document.querySelector('.parent');
+    //     console.log(myP);
+
+
+    //      //returns the elements based on they called by parent i.e myP and HTMLCollections is returend as output including only elements
+    //     console.log(myP.children);
+
+    //     //returns the first child of parent 
+    //     console.log(myP.children[0]);
+
+
+    //     //returns the parent of first childred
+    //        const newDay=document.querySelector('.day')
+    //        console.log(newDay.parentElement);
+
+
+
+
+    //     //edits the color of first child
+    //     myP.children[0].style.color="green";
+
+
+    //     //for loop on the above parent 
+    //     for (let i = 0; i <=myP.children.length; i++) {
+    //         console.log(myP.children[i]);
+    //         myP.style.color="blue";
+    //     }
+
+
+    //     //elements navigation using children i.e HTMLCollections
+    //     console.log(myP.firstElementChild);
+    //     console.log(myP.lastElementChild);
+    //     console.log(myP.nextElementSibling);
+    //     console.log(myP.previousElementSibling);
+    
+
+
+    //     ///returns all child nodes of parent myP i.e complete Node list with including text
+    //     console.log(myP.childNodes);
+    //     console.log(myP.firstChild);
+    //     console.log(myP.lastChild);
+    //     const newDay1=document.querySelector('.day')
+    //     console.log(newDay1.parentNode);
+        
+
+
+
+
+
+    // // //------------------------------------------------------------------------------------------------------------------------------------------------------------------    
+
+
+
+
+    //     //creating a new element h1 externally using DOM 
+    //     const myH1=document.createElement('h1');
+    //     console.log(myH1);
+
+    //     //adding text to new element h1
+    //     myH1.innerText="Welcome Here!";
+
+
+    //     //setting color
+    //     myH1.style.color="black";
+
+    //     //setting background color
+    //     myH1.style.backgroundColor="lightgreen";
+
+    //     //setting borderRadius
+    //     myH1.style.borderRadius="6px";
+
+
+    //     //setting padding
+    //     myH1.style.padding="3px";
+    
+
+    //     //appending/displaying myH1 on screen i.e  browser 
+    //     const addDisp=document.body.appendChild(myH1);
+    //     console.log(addDisp);
+
+    //     //adding class attributes
+    //    const newClsAtt= myH1.setAttribute('class','cls');
+    //    console.log(newClsAtt);
+
+
+    //     //adding id attributes
+    //     const newIdAtt=myH1.setAttribute('id','d1');
+    //     console.log(newIdAtt);
+
+
+
+
+
+
+
+
+
+
+    //-------------------------------------------------------------------------------------
+
+
+        //creating new element externally using DOM
+
+        // const newEle=document.createElement('h4');
+        // console.log(newEle);
+
+
+        // //setting class attributes
+        // newEle.setAttribute('class','cls');
+
+
+        // //setting id attributes
+        // newEle.setAttribute('id','idh4');
+
+
+        // //adding text to h4
+        // //1st method:
+        // newEle.innerText="adding text using innerText: welcome to h4 ";
+
+
+        // //2nd method:  MODERN METHOD
+        // const newText=document.createTextNode("    adding text using createTextNode: hello world! this is h4");
+        // newEle.appendChild(newText);
+
+
+
+
+        // //displaying h4 on browser screen
+
+        // const browScr=document.body.appendChild(newEle);
+        // console.log(browScr);
+
+
+
+        //-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+        
+
+
+        //METHOD-1 : adding a new list element externally and displaying on screen without a function 
+        // const myeleM=document.createElement('li');
+        // console.log(myeleM);
+        // myeleM.setAttribute('class','myele');
+        // myeleM.setAttribute('id','myid');
+        // myeleM.innerText="Cplusplus";
+
+        // const newBB=document.querySelector('ul').appendChild(myeleM);
+        // console.log(newBB);
+
+
+
+
+        //-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+         //METHOD-2 : adding a new list element externally and displaying on screen  using a function 
+        // function myfunc(lang){
+
+        //        const mynL= document.createElement('li');
+        //         console.log(mynL);
+        //         mynL.setAttribute('class','cls');
+        //         mynL.setAttribute('id','nId');
+        //         mynL.innerText=`${lang}`;   //innerText
+
+
+
+        //         const nsss=document.querySelector('ul').appendChild(mynL);
+        //         console.log(nsss);
+
+
+        // }
+        // myfunc("welocme");
+        // myfunc("here");
+        // myfunc("python");
+        // myfunc("Ruby");
+        // myfunc("Typescript");
+
+
+
+        //--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+        //METHOD-3 :  doing the above same work but with optimization
+
+        // function newfunc(myLang){
+        //     const newF=document.createElement('li');
+        //     console.log(newF);
+        //     newF.appendChild(document.createTextNode(myLang));   //createTextNode
+        //     document.querySelector('ul').appendChild(newF);
+
+        // }
+        // newfunc('king')
+
+
+
+
+        
+       //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+       //PRACTICE-SET:
+
+        //METHOD-1: creating a new element list and displaying on browser screen without a function
+        //    const neLi= document.createElement('li');
+        //    console.log(neLi);
+        //    neLi.setAttribute('class','cls');
+        //    neLi.setAttribute('id','ddd');
+        //    neLi.innerText="welcome";
+
+        //    const Q=document.querySelector('ul');
+        //    console.log(Q);
+        //    Q.appendChild(neLi);
+
+        
+        // ////METHOD-2: creating a new element list and displaying on browser screen with a function
+        // function nFunc(myL){
+            
+        //     const neLi2= document.createElement('li');
+        //    console.log(neLi2);
+        //    neLi2.setAttribute('class','cls2');
+        //    neLi2.setAttribute('id','ddd2');
+        //    neLi2.innerText=`${myL}`;
+
+        //    const Q1=document.querySelector('ul');
+        //    console.log(Q1);
+        //    Q1.appendChild(neLi2);
+        // }
+        // nFunc("hello");
+        // nFunc("Go lang");
+        // nFunc("Ruby");
+        // nFunc("speed");
+
+
+
+        // //METHOD-3: optimized method 
+        // function myF(lang){
+
+        //     const s=document.createElement('li');
+        //     console.log(s);
+
+        //     s.setAttribute('class','scls');
+        //     s.setAttribute('id','sd');
+
+        //     s.appendChild(document.createTextNode(lang));
+           
+
+        //     document.querySelector('ul').appendChild(s);
+           
+
+        // }
+        // myF("html");
+        // myF("css");
+        // myF("virat");
+
+        
+
+
+        // function n(s){
+        //     const ns=document.createElement('li');
+        //     console.log(ns);
+
+        //     ns.setAttribute('class','l');
+        //     ns.setAttribute('id','d');
+
+        //     ns.appendChild(document.createTextNode(s));
+        //     document.querySelector('ul').appendChild(ns)
+        // }
+        // n('s');
+
+
+
+        //optimized method of list
+
+        // function s(mylang){
+
+        //     const n=document.createElement('li');
+        //     console.log(n);
+
+
+        //     n.setAttribute('class','cld');
+        //     n.appendChild(document.createTextNode(mylang));
+        //     document.querySelector('ul').appendChild(n);
+        // }
+        // s('hello');
+        // s('world');
+        // s('disney');
+
+
+    //---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+    //EDITING LIST ELEMENT CONTENT:
+
+
+      //method-1:
+      const re= document.querySelector('li:nth-child(3)')
+    //   console.log(re);
+    //   re.innerHTML="mojo"
+
+
+
+
+
+
+    //method-2:
+    const ne=document.querySelector('li:first-Child');
+    // ne.outerHTML='<h1>King</h1>'
+
+     //method-3:
+     const ms=document.createElement('li');
+     ms.textContent="prince"
+
+    //  re.replaceWith(ms);
+
+
+    
+
+     //DELETING LIST ELEMENT(remove):
+
+
+     const del=document.querySelector('li:last-Child')
+     del.remove();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>
